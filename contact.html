@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
+        <title>TED Tooling</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="img/favicon.png">
+        <link rel="icon" href="img/shop/newLogo.png">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -70,8 +70,8 @@
 						<div class="col-lg-6 col-md-5 col-12">
 							<!-- Contact -->
 							<ul class="top-link">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Products</a></li>
+								<li><a href="#aboutUs">About</a></li>
+								<!--<li><a href="products.html">Products</a></li>     Not complete yet, need info-->
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 							<!-- End Contact -->
@@ -79,8 +79,8 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>*InsertPhone*</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+								<li><i class="fa fa-phone"></i>702-409-6005</li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:aroskelley2112@gmail.com">aroskelley2112@gmail.com</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -96,7 +96,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="img/logo.png" alt="#"></a>
+									<a href="index.html"><img id= logoimg src="img/shop/newLogo.png" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -109,7 +109,7 @@
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li><a href="index.html">Home</a></li>
-											<li><a href="products.html">Products </a></li>
+											<!--<li><a href="products.html">Products </a></li>    Not complete yet, need more info-->
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>
 									</nav>
@@ -154,11 +154,19 @@
 								<div id="myMap"></div>
 								<!--/End Google-map -->
 							</div>
+							<script>
+								(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+								  key: AIzaSyBEy1kR1w6LHiWLVDww_FGglWM77G9bYuk,
+								  v: "weekly",
+								  // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+								  // Add other bootstrap parameters as needed, using camel case.
+								});
+							  </script>
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-us-form">
 								<h2>Contact With Us</h2>
-								<p>If you have any questions please fell free to contact with us.</p>
+								<p>If you have any questions please feel free to contact us.</p>
 								<!-- Form -->
 								<form class="form" method="post" action="mail/mail.php">
 									<div class="row">
@@ -190,9 +198,6 @@
 										<div class="col-12">
 											<div class="form-group login-btn">
 												<button class="btn" type="submit">Send</button>
-											</div>
-											<div class="checkbox">
-												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Do you want to subscribe our Newsletter ?</label>
 											</div>
 										</div>
 									</div>

@@ -1,80 +1,27 @@
-$(document).ready(function(){
-/*====================================
-	Google Map JS
-======================================*/ 	
-(function(){
+// Initialize and add the map
+let myMapmap;
 
-	var map;
-	map = new GMaps({
-		el: '#myMap',
-		lat: 51.507351,
-		lng: -0.127758,
-		scrollwheel:false,
-		zoom: 15,
-		zoomControl : false,
-		panControl : false,
-		streetViewControl : true,
-		mapTypeControl: false,
-		overviewMapControl: false,
-		clickable: false
-	});
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: 36.234312, lng: -115.078338 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-	var image = 'img/map-marker.png';
-	map.addMarker({
-		lat: 51.507351,
-		lng: -0.127758,
-		icon: image,
-		animation: google.maps.Animation.DROP,
-		verticalAlign: 'bottom',
-		horizontalAlign: 'left',
-		backgroundColor: '#efece0',
-	});
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("myMap"), {
+    zoom: 4,
+    center: position,
+    mapId: "myMap",
+  });
 
-	var styles = [
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: myMap,
+    position: position,
+    title: "Uluru",
+  });
+}
 
-		{
-			"featureType": "road",
-			"stylers": [
-				{ "color": "#ffffff" }
-			]
-		},{
-			"featureType": "water",
-			"stylers": [
-				{ "color": "#bde5f6" }
-			]
-		 },{
-		  "featureType": "landscape",
-			 "stylers": [
-			 { "color": "#f2f2f2" }
-			 ]
-		},{
-			"elementType": "labels.text.fill",
-			"stylers": [
-				{ "color": "#FF7550" }
-			]
-		},{
-			"featureType": "poi",
-			"stylers": [
-			 { "color": "#e2f0cd" }
-			]
-		},{
-			"elementType": "labels.text",
-			"stylers": [
-				{ "saturation": 2 },
-				{ "weight": 0.3},
-				{ "color": "#a8a8a8" }
-			]
-		}
-
-	];
-
-	 map.addStyle({
-		styledMapName:"Styled Map",
-		styles: styles,
-		mapTypeId: "map_style"
-	});
-
-	map.setStyle("map_style");
-}());
-
-});
+initMap();

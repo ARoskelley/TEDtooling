@@ -270,7 +270,7 @@ body{
 	padding: 25px 12px;
 	position: relative;
 	display: inline-block;
-	position:relative;
+	position: relative;
 }
 .header .nav li a::before {
 	position: absolute;
