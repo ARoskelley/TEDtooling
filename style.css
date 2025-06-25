@@ -901,11 +901,20 @@ body{
 .why-choose .choose-left h3{
 	font-size:24px;
 	font-weight:600;
-	color:#2C2D3F;
+	color:#e1e1e1;
 	position:relative;
 	padding-bottom:20px;
 	margin-bottom:24px;
 }
+
+.why-choose .section-title h2{
+	color:#e1e1e1;
+}
+
+.why-choose p{
+	color:#e1e1e1;
+}
+
 .why-choose .choose-left h3:before{
 	position:absolute;
 	content:"";
@@ -918,9 +927,11 @@ body{
 .why-choose .choose-left p{
 	margin-bottom:35px;
 }
+
 .why-choose .choose-left .list{}
+
 .why-choose .choose-left .list li {
-	color: #868686;
+	color: #e1e1e1;
 	margin-bottom: 12px;
 }
 .why-choose .choose-left .list li:last-child{
@@ -932,7 +943,7 @@ body{
 	line-height:15px;
 	text-align:center;
 	background:#04abeb;
-	color:#fff;
+	color:#e1e1e1;
 	font-size:14px;
 	border-radius:100%;
 	padding-left:2px;
@@ -940,12 +951,12 @@ body{
 }
 /* Start Faq CSS */
 .why-choose{
-	background:#fff;
+	background:#222222;
 }
 .why-choose .choose-right{
 	height:100%;
 	width:100%;
-	background-image:url('img/video-bg.jpg');
+	background-image:url('img/shop/thingies-bg.jpg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
